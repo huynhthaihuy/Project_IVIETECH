@@ -8,17 +8,19 @@ class Login extends Component {
                 <div className="panel panel-default">
                     <div className="panel-heading">Login</div>
                     <div className="panel-body">
-                        <form className="form-horizontal" role="form">
+                        <form className="form-horizontal" role="form" action="{{route('users.postlogin')}}" method="post">
+                            
                             <div className="form-group">
                                 <label htmlFor="email" className="col-md-4 control-label">E-Mail Address</label>
 
                                 <div className="col-md-6">
-                                    <input id="email"
+                                    {/* <input id="email"
                                            type="email"
                                            className="form-control"
                                            name="email"
                                            value=""
-                                           required autoFocus/>
+                                           required autoFocus/> */}
+                                           <input id="email" type="email" className="form-control" name="email" required/>
 
                                 </div>
                             </div>

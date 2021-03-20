@@ -20,6 +20,7 @@ class Navigation extends Component {
         const navClass = this.state.collapsed ? "collapse" : "";
 
         return (
+            
             <div className="navbar navbar-default navbar-fixed-top">
                 <div className="container">
                     <div className="navbar-header">

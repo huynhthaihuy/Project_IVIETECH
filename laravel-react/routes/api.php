@@ -15,7 +15,6 @@ use App\Article;
 |
 */
 Route::post('/auth/register', 'Auth\RegisterController@register');
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -50,3 +49,19 @@ Route::delete('/articles/{id}', function ($id) {
 
     return response('Article Deleted.', 200);
 });
+Route::put('/users/{id}',function($id, Request $request){
+    $user = User::findOrFail($id);
+
+    $user->name = $request->get('name');
+    $user->email = $request->get('email');
+    $user->password = $request->get('password');
+    $user->save();
+    
+    return response('User updated', 200);
+});
+Route::delete('/users/{id}',function ($id){
+    $user = User::findOrFail($id);
+    $user->delete();
+    return response('Delete Success', 200);
+});
+

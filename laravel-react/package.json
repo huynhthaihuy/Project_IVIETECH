@@ -27,5 +27,8 @@
     "redux-thunk": "^2.2.0"
   },
   "author": "Moeen Basra",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.12.0"
+  }
 }

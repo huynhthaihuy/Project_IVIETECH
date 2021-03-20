@@ -41,6 +41,7 @@ class Users extends Component {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Joined On</th>
+                <th>Edit</th>
             </tr>
             </thead>
             <tbody>
